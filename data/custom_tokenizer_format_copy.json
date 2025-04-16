@@ -1,0 +1,218 @@
+[
+    {
+        "tokens": [
+            "ไอบูโพรเฟน",
+            "12.5mg",
+            "เม็ด",
+            "REG026",
+            "2024-10-15",
+            "2026-08-18",
+            "ควรใช้ตามคำแนะนำของแพทย์",
+            "ลดไข้ในผู้ป่วยไข้สูง",
+            "เขย่าขวดให้เข้ากันก่อนทุกครั้ง"
+        ],
+        "ner_tags": [
+            "B-DRUG_NAME",
+            "B-DOSAGE",
+            "B-FORM",
+            "B-DRUG_REG_NO",
+            "B-MFG_DATE",
+            "B-EXP_DATE",
+            "B-WARNINGS",
+            "B-INDICATIONS",
+            "B-USAGE_INSTRUCTIONS"
+        ]
+    },
+    {
+        "tokens": [
+            "Diclofenac",
+            "500mg",
+            "เม็ด",
+            "REG063",
+            "2024-05-07",
+            "2028-01-26",
+            "ควรเก็บยาให้พ้นมือเด็ก",
+            "ลดอาการเจ็บปวดหลังผ่าตัด",
+            "รับประทาน 2 เม็ดก่อนนอน"
+        ],
+        "ner_tags": [
+            "B-DRUG_NAME",
+            "B-DOSAGE",
+            "B-FORM",
+            "B-DRUG_REG_NO",
+            "B-MFG_DATE",
+            "B-EXP_DATE",
+            "B-WARNINGS",
+            "B-INDICATIONS",
+            "B-USAGE_INSTRUCTIONS"
+        ]
+    },
+    {
+        "tokens": [
+            "Aspirin",
+            "5mg",
+            "tablet",
+            "REG011",
+            "2025-02-16",
+            "2027-12-07",
+            "ห้ามเกินขนาดที่แนะนำ",
+            "บรรเทาอาการจากการติดเชื้อทางเดินอาหาร",
+            "รับประทานวันละ 1 เม็ดหลังมื้อกลางวัน"
+        ],
+        "ner_tags": [
+            "B-DRUG_NAME",
+            "B-DOSAGE",
+            "B-FORM",
+            "B-DRUG_REG_NO",
+            "B-MFG_DATE",
+            "B-EXP_DATE",
+            "B-WARNINGS",
+            "B-INDICATIONS",
+            "B-USAGE_INSTRUCTIONS"
+        ]
+    },
+    {
+        "tokens": [
+            "ไดอะซีแพม",
+            "500mg",
+            "เม็ด",
+            "REG032",
+            "2024-07-12",
+            "2027-01-27",
+            "หากใช้ยาแล้วมีอาการตาพร่ามัว ควรหยุดยา",
+            "ลดอาการจุกเสียดจากแผลในกระเพาะ",
+            "ทาบริเวณที่มีอาการแล้วล้างมือหลังใช้"
+        ],
+        "ner_tags": [
+            "B-DRUG_NAME",
+            "B-DOSAGE",
+            "B-FORM",
+            "B-DRUG_REG_NO",
+            "B-MFG_DATE",
+            "B-EXP_DATE",
+            "B-WARNINGS",
+            "B-INDICATIONS",
+            "B-USAGE_INSTRUCTIONS"
+        ]
+    },
+    {
+        "tokens": [
+            "เทมาซีพัม",
+            "500mg",
+            "capsule",
+            "REG007",
+            "2024-04-27",
+            "2026-12-06",
+            "ห้ามใช้ในหญิงตั้งครรภ์",
+            "บรรเทาอาการเมาค้าง",
+            "ทาบริเวณที่มีอาการแล้วล้างมือหลังใช้"
+        ],
+        "ner_tags": [
+            "B-DRUG_NAME",
+            "B-DOSAGE",
+            "B-FORM",
+            "B-DRUG_REG_NO",
+            "B-MFG_DATE",
+            "B-EXP_DATE",
+            "B-WARNINGS",
+            "B-INDICATIONS",
+            "B-USAGE_INSTRUCTIONS"
+        ]
+    },
+    {
+        "tokens": [
+            "Clarithromycin",
+            "12.5mg",
+            "tablet",
+            "REG001",
+            "2024-07-19",
+            "2027-06-16",
+            "ห้ามใช้ในผู้มีโรคหัวใจ",
+            "บรรเทาอาการไอเจ็บคอ",
+            "หยด 1-2 หยดในจมูกวันละ 3 ครั้ง"
+        ],
+        "ner_tags": [
+            "B-DRUG_NAME",
+            "B-DOSAGE",
+            "B-FORM",
+            "B-DRUG_REG_NO",
+            "B-MFG_DATE",
+            "B-EXP_DATE",
+            "B-WARNINGS",
+            "B-INDICATIONS",
+            "B-USAGE_INSTRUCTIONS"
+        ]
+    },
+    {
+        "tokens": [
+            "Erythromycin",
+            "10mg",
+            "capsule",
+            "REG018",
+            "2024-07-11",
+            "2027-08-27",
+            "ห้ามบดหรือเคี้ยวยาเม็ด",
+            "รักษาอาการกรดไหลย้อน",
+            "รับประทาน 1 แคปซูลหลังอาหารเช้า"
+        ],
+        "ner_tags": [
+            "B-DRUG_NAME",
+            "B-DOSAGE",
+            "B-FORM",
+            "B-DRUG_REG_NO",
+            "B-MFG_DATE",
+            "B-EXP_DATE",
+            "B-WARNINGS",
+            "B-INDICATIONS",
+            "B-USAGE_INSTRUCTIONS"
+        ]
+    },
+    {
+        "tokens": [
+            "Doxycycline",
+            "300mg",
+            "เม็ด",
+            "REG059",
+            "2024-10-09",
+            "2027-05-28",
+            "ไม่ควรใช้ในผู้สูงอายุที่มีโรคประจำตัว",
+            "รักษาท้องร่วงจากแบคทีเรีย",
+            "ใช้ยาทาเพียงบางๆ นวดเบาๆ วันละ 1-2 ครั้ง"
+        ],
+        "ner_tags": [
+            "B-DRUG_NAME",
+            "B-DOSAGE",
+            "B-FORM",
+            "B-DRUG_REG_NO",
+            "B-MFG_DATE",
+            "B-EXP_DATE",
+            "B-WARNINGS",
+            "B-INDICATIONS",
+            "B-USAGE_INSTRUCTIONS"
+        ]
+    },
+    {
+        "tokens": [
+            "อีริโทรมัยซิน",
+            "150mg",
+            "tablet",
+            "REG010",
+            "2024-04-03",
+            "2026-04-07",
+            "ห้ามใช้ในผู้ที่มีภาวะเลือดออกผิดปกติ",
+            "ลดอาการบวมจากการบาดเจ็บ",
+            "รับประทานวันละ 3 ครั้งหลังมื้ออาหารใหญ่"
+        ],
+        "ner_tags": [
+            "B-DRUG_NAME",
+            "B-DOSAGE",
+            "B-FORM",
+            "B-DRUG_REG_NO",
+            "B-MFG_DATE",
+            "B-EXP_DATE",
+            "B-WARNINGS",
+            "B-INDICATIONS",
+            "B-USAGE_INSTRUCTIONS"
+        ]
+    }
+]
