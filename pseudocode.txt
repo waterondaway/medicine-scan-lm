@@ -1,0 +1,67 @@
+Algorithm 1 PreprocessForNER
+Input:
+  CSV files: finetuning_data/train.csv, finetuning_data/eval.csv, finetuning_data/test.csv
+  Tokenizer: XLM-RoBERTa base
+Output:
+  JSON files: train.json, eval.json, test.json
+  Each sample: { "tokens": [t1, t2, ...], "labels": [l1, l2, ...] }
+
+procedure PreprocessForNER()
+  tokenizer ← AutoTokenizer("xlm-roberta-base")
+
+  D_train ← read_csv("finetuning_data/train.csv")
+  D_eval  ← read_csv("finetuning_data/eval.csv")
+  D_test  ← read_csv("finetuning_data/test.csv")
+
+  define AutomateNER(row):
+    name_tokens   ← tokenize(row["patient_name"])
+    id_tokens     ← tokenize(row["patient_id"])
+    birth_tokens  ← tokenize(row["patient_birthdate"])
+    drug_tokens   ← tokenize(row["drug_name"])
+    dosage_tokens ← tokenize(row["dosage"])
+    form_tokens   ← tokenize(row["form"])
+    regno_tokens  ← tokenize(row["drug_reg_no"])
+    mfg_tokens    ← tokenize(row["mfg_date"])
+    exp_tokens    ← tokenize(row["exp_date"])
+    warn_tokens   ← tokenize(row["warnings"])
+    indic_tokens  ← tokenize(row["indications"])
+    usage_tokens  ← tokenize(row["usage_instructions"])
+
+    name_labels   ← O × |name_tokens|
+    id_labels     ← O × |id_tokens|
+    birth_labels  ← O × |birth_tokens|
+    drug_labels   ← ["B-DRUG_NAME"] + ["I-DRUG_NAME"] × (|drug_tokens|-1)
+    dosage_labels ← ["B-DOSAGE"] + ["I-DOSAGE"] × (|dosage_tokens|-1)
+    form_labels   ← ["B-FORM"] + ["I-FORM"] × (|form_tokens|-1)
+    regno_labels  ← O × |regno_tokens|
+    mfg_labels    ← O × |mfg_tokens|
+    exp_labels    ← O × |exp_tokens|
+    warn_labels   ← ["B-WARNINGS"] + ["I-WARNINGS"] × (|warn_tokens|-1)
+    indic_labels  ← ["B-INDICATIONS"] + ["I-INDICATIONS"] × (|indic_tokens|-1)
+    usage_labels  ← ["B-USAGE_INSTRUCTIONS"] + ["I-USAGE_INSTRUCTIONS"] × (|usage_tokens|-1)
+
+    tokens ← concatenate(
+      name_tokens, id_tokens, birth_tokens,
+      drug_tokens, dosage_tokens, form_tokens,
+      regno_tokens, mfg_tokens, exp_tokens,
+      warn_tokens, indic_tokens, usage_tokens
+    )
+    labels ← concatenate(
+      name_labels, id_labels, birth_labels,
+      drug_labels, dosage_labels, form_labels,
+      regno_labels, mfg_labels, exp_labels,
+      warn_labels, indic_labels, usage_labels
+    )
+
+    return { "tokens": tokens, "labels": labels }
+  end define
+
+  T_train ← map(AutomateNER, D_train)
+  T_eval  ← map(AutomateNER, D_eval)
+  T_test  ← map(AutomateNER, D_test)
+
+  write_json("train.json", T_train)
+  write_json("eval.json",  T_eval)
+  write_json("test.json",  T_test)
+end procedure
+
