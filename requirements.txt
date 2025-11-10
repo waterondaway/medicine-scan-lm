@@ -5,3 +5,7 @@ seqeval
 evaluate
 accelerate
 faker
+numpy
+pandas
+scikit-learn
+matplotlib
